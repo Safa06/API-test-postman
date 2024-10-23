@@ -1,8 +1,9 @@
-##**API-1 for Testing through POSTMAN**
+# **API-1 for Testing through POSTMAN**
 ###https://restful-booker.herokuapp.com/booking/
 
-##**API-2 for Testing through POSTMAN**
+# **API-2 for Testing through POSTMAN**
 ###https://simple-books-api.glitch.me
+
 #### **Following the steps are :**
 #### Endpoints :
 
