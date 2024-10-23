@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "c889ead0-f8c3-49d0-97e3-9ed2960eb3f2",
+		"name": "API-Assignment-2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38681281"
+	},
+	"item": [
+		{
+			"name": "Get Status of the API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simple-books-api.glitch.me",
+					"protocol": "https",
+					"host": [
+						"simple-books-api",
+						"glitch",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the List of Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Basic_URL}}/books",
+					"host": [
+						"{{Basic_URL}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Detailed Info of a Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Basic_URL}}/books/5",
+					"host": [
+						"{{Basic_URL}}"
+					],
+					"path": [
+						"books",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth for submitting a Order",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"clientName\" : \"Safa\",\r\n    \"clientEmail\":\"safa@gmail.com\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Basic_URL}}/api-clients/",
+					"host": [
+						"{{Basic_URL}}"
+					],
+					"path": [
+						"api-clients",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit a new Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "e500cf844ad1c7d34c786d611bd77df5127a69cfe45efccfaa9f13e00d97cb8d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\": 5,\r\n    \"customerName\":\"Nishat\"\r\n}\r\n\r\n\r\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Basic_URL}}/orders",
+					"host": [
+						"{{Basic_URL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "e500cf844ad1c7d34c786d611bd77df5127a69cfe45efccfaa9f13e00d97cb8d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Basic_URL}}/orders",
+					"host": [
+						"{{Basic_URL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Allow to view an existing Order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "e500cf844ad1c7d34c786d611bd77df5127a69cfe45efccfaa9f13e00d97cb8d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Basic_URL}}/orders/Da0fBzY5i3zSca30onicx",
+					"host": [
+						"{{Basic_URL}}"
+					],
+					"path": [
+						"orders",
+						"Da0fBzY5i3zSca30onicx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an existing Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "e500cf844ad1c7d34c786d611bd77df5127a69cfe45efccfaa9f13e00d97cb8d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"customerName\": \"Anik\"\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Basic_URL}}/orders/Da0fBzY5i3zSca30onicx",
+					"host": [
+						"{{Basic_URL}}"
+					],
+					"path": [
+						"orders",
+						"Da0fBzY5i3zSca30onicx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "e500cf844ad1c7d34c786d611bd77df5127a69cfe45efccfaa9f13e00d97cb8d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Basic_URL}}/orders/Da0fBzY5i3zSca30onicx",
+					"host": [
+						"{{Basic_URL}}"
+					],
+					"path": [
+						"orders",
+						"Da0fBzY5i3zSca30onicx"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
